@@ -18,7 +18,7 @@ int main()
 	sf::ContextSettings settings;
 	settings.antialiasingLevel = 8;
 
-	sf::RenderWindow window(sf::VideoMode(WindowWidth(), WindowHeight()), "Diffusion-Limited Aggregation", 0, settings);
+	sf::RenderWindow window(sf::VideoMode(WindowWidth(), WindowHeight()), "Diffusion-Limited Aggregation", sf::Style::Close, settings);
 
 	tree.push_back(Walker(WindowWidth()/2, WindowHeight()/2));
 	
@@ -54,7 +54,6 @@ int main()
 				if (walkers[i].update(tree)) {
 					tree.push_back(walkers[i]);
 				    walkers.erase(walkers.begin() + i);
-					cout << tree.size() << "\n";
 					//P% * X = Y 
 					// ^ to cal percentage
 				}

@@ -20,8 +20,8 @@ void Walker::display(sf::RenderWindow &MainWindow)
 	CircleShape Walker(r);
 	Walker.setOrigin(5, 5);
 	Walker.setFillColor(Color(100, 0, 0, 255));
-	Walker.setOutlineColor(Color(0,0,0));
-	Walker.setOutlineThickness(2);
+	Walker.setOutlineColor(Color(100,0,0, 1));
+	Walker.setOutlineThickness(1);
 	Walker.setPosition(pos);
 	MainWindow.draw(Walker);
 
